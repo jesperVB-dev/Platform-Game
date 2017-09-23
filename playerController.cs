@@ -27,7 +27,7 @@ public class playerController : MonoBehaviour {
 			transform.Translate(Vector2.right * movingSpeed * Time.deltaTime * Input.GetAxis("Horizontal"));
 		}
 
-		if (Input.GetAxis ("Vertical") > 0 && possibleJump == true) {
+		if (Input.GetKeyDown(KeyCode.UpArrow) && possibleJump == true) {
 			rb2D.AddForce (Vector2.up * jumpSpeed);
 			possibleJump = false;
 		}
